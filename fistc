@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+
+cout << "당신의 이름은 무엇입니까?\n";
+char name0[12];
+cin.getline(name0, 12, \n);
+cout << "반갑습니다. " << name0 << "님" << endl;
+
+int colap;
+int samdasoop;
+int fantap;
+int colam;
+int samdasoom;
+int fantam;
+
+stc::cout << "-----------SWING 30------------" << std::endl;
+stc::cout << "콜라의 가격: " << std::endl
+stc::cin >> colap;
+stc::cout << "삼다수의 가격: " << std::endl
+stc::cin >> samdasoop;
+stc::cout << "환타의 가격: " << std::endl
+stc::cin >> fantap;
+
+stc::cout << "개수를 입력해주세요." << std::endl
+stc::cout << "콜라 수량: " << std::endl
+stc::cin >> colam;
+stc::cout << "삼다수 수량: " << std::endl
+stc::cin >> samdasoom;
+stc::cout << "환타 수량: " << std::endl
+stc::cin >> fantam;
+stc::cout << "-------------------------------" << std::endl;
+
+cout << "500원을 할인받아 총 " << (colap*colam+samdasoop*samdasoom+fantap*fantam)-500 << "원 입니다." << endl;
