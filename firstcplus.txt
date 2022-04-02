@@ -1,0 +1,34 @@
+#include <iostream> //C++ 코드 읽기 전 헤더 파일을 읽어 소스 코드에 삽입하도록 하는 명령어
+using namespace std; //이름 충돌 방지, std::는 생략한다
+int main() { //main 함수, main 함수 종료시 프로그램도 종료된다
+
+cout << "당신의 이름은 무엇입니까?\n"; //출력할 때 사용하는 명령어, 이후 줄넘기기를 위해 \n 추가.
+char name0[12]; // char 배열에 문자열을 입력받는다.
+cin.getline(name0, 12, \n); //공백을 포함한 문자열인 김(공백)태희를 입력받기 위해 cin.getline()을 사용했다
+cout << "반갑습니다. " << name0 << "님" << endl; // 입력시 반갑습니다. 김 태희님. 출력.
+
+int colap; // 변수 콜라의 가격
+int samdasoop; // 변수 삼다수 가격
+int fantap; // 변수 환타 가격
+int colam; // 변수 콜라 개수
+int samdasoom; // 변수 삼다수 개수
+int fantam; // 변수 환타 개수
+
+std::cout << "-----------SWING 30------------" << std::endl; // 뒤에 작성한 피연산자 출력을 위해 std::cout
+std::cout << "콜라의 가격: " << std::endl // 뒤에 작성한 피연산자 출력을 위해 std::cout
+std::cin >> colap; // 오른쪽 피연산자에 지정된 변수 삽입을 위해 std::cin (std::랑 >>반대방향)
+std::cout << "삼다수의 가격: " << std::endl // 뒤에 작성한 피연산자 출력을 위해 std::cout
+std::cin >> samdasoop; // 오른쪽 피연산자에 지정된 변수 삽입을 위해 std::cin
+std::cout << "환타의 가격: " << std::endl // 뒤에 작성한 피연산자 출력을 위해 std::cout
+std::cin >> fantap; // 오른쪽 피연산자에 지정된 변수 삽입을 위해 std::cin
+
+std::cout << "개수를 입력해주세요." << std::endl // 뒤에 작성한 피연산자 출력을 위해 std::cout
+std::cout << "콜라 수량: " << std::endl // 뒤에 작성한 피연산자 출력을 위해 std::cout
+std::cin >> colam; // 오른쪽 피연산자에 지정된 변수 삽입을 위해 std::cin
+std::cout << "삼다수 수량: " << std::endl // 뒤에 작성한 피연산자 출력을 위해 std::cout
+std::cin >> samdasoom; // 오른쪽 피연산자에 지정된 변수 삽입을 위해 std::cin
+std::cout << "환타 수량: " << std::endl // 뒤에 작성한 피연산자 출력을 위해 std::cout
+std::cin >> fantam; // 오른쪽 피연산자에 지정된 변수 삽입을 위해 std::cin
+std::cout << "-------------------------------" << std::endl; // 뒤에 작성한 피연산자 출력을 위해 std::cout
+
+cout << "500원을 할인받아 총 " << (colap*colam+samdasoop*samdasoom+fantap*fantam)-500 << "원 입니다." << endl; // 최종 금액은 각 음료 가격*개수 후 500원을 뺀 값 출력을 위해 연산자 활용
