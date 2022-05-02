@@ -1,38 +1,39 @@
 #include<iostream>
-using namespace std;
+using namespace std; //전체 std 생략
 
 int main() {
-	srand(time(NULL));
-	int x = rand() % 99;
-	int y;
-	int z = 0;
+	srand(time(NULL)); //random 함수 사용
+	int x = rand() % 99; //0~99까지 범위인 랜덤 함수 생성
+	int y; //특정배수 개수 변수
+	int z; //특정 배수 변수
 
-	cout << "랜덤한 수: " << x << endl;
+	cout << "랜덤한 수: " << x << endl; //랜덤한 수 받기
 	cout << "특정배수 개수: ";
-	cin >> y;
+	cin >> y; //특정 배수 값 직접 결정하기
 
-	for (int k = 0; k < y; k++) {
+	for (int k = 0; k < y; k++) { //전체 함수 특정 배수 값 만큼 반복하기
 		cout << k << "번째 특정 배수: ";
-		cin >> z;
+		cin >> z; //특정 배수 결정하기
 
 		cout << "<특정배수만 출력하는 프로그램>" << endl;
 
-		for (int i = 1; i <= x; i++) {
-			if (i % z == 0)
+		for (int i = 1; i <= x; i++) { //1부터 랜덤한 수까지 반복하기
+			if (i % z == 0) //나머지가 0이면 z의 배수임
 				cout << i << ", ";
-			continue;
+			continue; //랜덤한 수까지 함수 반복하도록 설정
 		}
-		cout << endl;
+		cout << endl; //줄 띄우기
 
 		cout << "<특정배수 제외 출력하는 프로그램>" << endl;
 
-		for (int i = 1; i <= x; i++) {
-			if (i % z != 0)
+		for (int i = 1; i <= x; i++) { //1부터 랜덤한 수까지 반복하기
+			if (i % z != 0) //나머지가 0이 아니면 배수가 아님
 				cout << i << ", ";
-			continue;
+			continue; //랜덤한 수까지 함수 반복하도록 설정
 		}
+		cout << endl; //줄 띄우기
 
 	}
 
-	return 0;
+	return 0; //함수 종료
 }
