@@ -1,33 +1,27 @@
 #include<iostream>
 using namespace std;
 
-void total(int *bank[]) {
-	int i, total;
-	for (i = 0; i < 4; i++)
-		total += *bank[i];
+int total(int* h, int* u, int* s, int* k) {
+	int total;
+	total=*h+*u+*s+*k;
+	return total;
 }
 
-void myaccounts(string* bank_name[], int* bank[]) {
+void myaccounts(string* h, string* u, string* s, string* k, int* h_p, int *u_p, int* s_p, int* k_p) {
 	cout << "-------------------은행 별 계좌정보------------------------" << endl;
-	int i, j;
-	cout << " | ";
-	for (i = 0; i < 4; i++)
-		cout << *bank_name[i];
-	cout << " | " << endl;
-	cout << " | ";
-	for (j = 0; j < 4; j++)
-		cout << *bank[i];
+	cout << " | " << *h << " | " << *u << " | " << *s << " | " << *k << " | " << endl;
+	cout << " | " << *h_p << " | " << *u_p << " | " << *s_p << " | " << *k_p << " | " << endl;
 	cout << " | " << endl;
 }
 
 int main() {
-	string bank_name[4] = {"하나", "우리", "신한", "국민"};
+	string bank_name[4] = { "하나", "우리", "신한", "국민" };
 	int bank[4] = { 5000, 4000, 0, 10 };
 	int total_money = total(bank, &bank[1], &bank[2], &bank[3]);
 
 	cout << "******************SWING 자산관리 서비스*********************" << endl;
-	cout << myaccounts(bank_name, &bank_name[1], &bank_name[2], &bank_name[3], bank, &bank[1], &bank[2], &bank[3]) << endl;
-	cout << "현재 SWING 자산관리 서비스에 등록된 회원님의 총 자산은" << total_money << "원 입니다." << endl;
+	myaccounts(bank_name, &bank_name[1], &bank_name[2], &bank_name[3], bank, &bank[1], &bank[2], &bank[3]);
+	cout << "현재 SWING 자산관리 서비스에 등록된 회원님의 총 자산은 " << total_money << "원 입니다." << endl;
 	cout << "***********************************************************" << endl;
 
 	return 0;
